@@ -5,7 +5,7 @@ databases:
     user: gestion_app_user
 
 services:
-     type: web
+    type: web
     plan: free
     name: sistema
     runtime: python
@@ -13,11 +13,11 @@ services:
     startCommand: "python -m gunicorn sistema.asgi:application -k uvicorn.workers.UvicornWorker"    
     
   envVars:
-         key: DATABASE_URL
-        fromDatabase:
-          name: gestion_app
-          property: connectionString
-         key: SECRET_KEY
-        generateValue: true
-         key: WEB_CONCURRENCY
-        value: 4
+    key: DATABASE_URL
+    fromDatabase:
+    name: gestion_app
+    property: connectionString
+    key: SECRET_KEY
+    generateValue: true
+    key: WEB_CONCURRENCY
+    value: 4
