@@ -1,5 +1,5 @@
 databases:
-     name: gestion app
+    name: gestion app
     plan: free
     databaseName: gestion_app
     user: gestion_app_user
